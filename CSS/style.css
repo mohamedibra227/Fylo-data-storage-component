@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Open+Sans&family=Poppins:wght@400;600&family=Raleway:wght@400;700&display=swap');
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --main-font: 'Raleway', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* FOR MOBILE 375px */
+body {
+    background-image: url(../images/bg-mobile.png);
+    font-family: var(--main-font);
+    font-size: 14px;
+}
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-one {
+    width: 90%;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px 100px 10px 10px;
+}
+.logo {
+    margin: 9%;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    margin-left: 9%;
+    margin-bottom: 9%;
+    width: 50%;
+    justify-content: space-between;
+}
+#icons {
+    background-color: var(--Very-Dark-Blue);
+    padding: 7%;
+    /* height: 20px;
+    width: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.box-two {
+    background-color: var(--Dark-Blue);
+    color: white;
+    width: 90%;
+    margin-top: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bubble {
+    color: black;
+    height: 120px;
+    width: 200px;
+    align-self: center;
+    justify-self: end;
+    position: absolute;
+    top: 70%;
+}
+.bubble .top {
+    background-color: white;
+    height: 90px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.bubble.bot {
+    display: none;
+}
+
+.bubble .top h1 {
+    font-size: 45px;
+}
+.bubble .top p {
+    color: var(--Grayish-Blue);
+    letter-spacing: 1px;
+}
+.text {
+    margin-top: 10%;
+}
+.text span {
+    font-weight: bolder;
+}
+.bar {
+    background-color: var(--Very-Dark-Blue);
+    width: 90%;
+    margin-top: 5%;
+    padding: 1%;
+    border-radius: 20px;
+}
+.bar .insidbar {
+    border-radius: 20px;
+    width: 81.5%;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: flex;
+    justify-content: flex-end;
+}
+.bar .insidbar .whiteball {
+    height: 10px;
+    border-radius: 10px;
+    width: 4%;
+    background-color: white;
+}
+.limit {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 15%;
+}
+/* Desktop 1440px */
+@media (min-width: 750px){
+    body {
+        background-image: url(../images/bg-desktop.png);
+        background-position-y: bottom;
+        background-color: var(--Very-Dark-Blue);
+        background-repeat: repeat-x;
+    }
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+    .box-one {
+        width: 25%;
+        margin-right: 2%;
+    }
+    .box-two {
+        width: 45%;
+        margin-left: 2%;
+        margin-bottom: 1%;
+        margin-top: 3%;
+        padding: 25px 10px;
+        position: relative;
+    }
+    .bubble {
+        position: absolute;
+        top: -50%;
+        right: 35px;
+    }
+    .bubble .top {
+        height: 90px;
+        border-radius: 15px 15px 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .bubble .bot {
+        background-color: white;
+        height: 30px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .bubble .bot div {
+        height: 40px;
+        background-color: var(--Dark-Blue);
+        width: 150%;
+        transform: skewX(45deg);
+        position: absolute;
+        right: 0;
+
+    }
+    .text {
+        margin-top: 5%;
+        align-self: flex-start;
+        margin-left: 5%;
+    }
+    .bar {
+        margin-top: 3%;
+        padding: .5%;
+    }
+    .bar .insidbar .whiteball {
+        width: 2%;
+    }
+    .limit {
+        margin: 1% 0;
+    }
+}
